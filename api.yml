@@ -116,49 +116,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/ServerErrorResponse'
 
-  #3
-  /v2/sampleTemplate/getData:
-    get:
-      tags:
-        - sample
-      summary: Sample Get Api using openapi generator
-      description: Results will be different by product or based on roles of the current logged in user
-      operationId: getDataV2
-      parameters:
-        - name: Authorization
-          in: header
-          description: Bearer Token for Authorization
-          required: true
-          schema:
-            type: string
-            default: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTA4MjIxMjEsImlhdCI6MTcxMDgyMDkyMSwianRpIjoiZDg0ZDVlYWYtNjAzNi00YTk0LWE5ZTItZjU0NDY1MmU3MWQ3IiwiaXNzIjoiaHR0cHM6Ly9leGFtcGxlLnFiaXR1bS5uZXQvYXV0aC9yZWFsbXMvUUIiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiNWYxNTEzMjMtNzgzMS00MTc3LWI5ZjItODI0MGMxOGRmY2Y5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoicHJvdGVjdGVkIiwic2Vzc2lvbl9zdGF0ZSI6Ijc0ZWJjNjgxLWEzOGYtNDhlZC04ZGMxLWM3Njk1MmM5OTNmOCIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXFiLWluc3BlY3QiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6Ijc0ZWJjNjgxLWEzOGYtNDhlZC04ZGMxLWM3Njk1MmM5OTNmOCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJvZmlsZSI6ImhlaHV3aGRkIiwibmFtZSI6ImRldiB1c2VyIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiZGV2dXNlciIsImdpdmVuX25hbWUiOiJkZXYiLCJmYW1pbHlfbmFtZSI6InVzZXIiLCJlbWFpbCI6ImRldnVzZXJAcWJpdHVtLmNvbSJ9.DAItVmFlE7Vs57GE0Svc0lbt-4QVaIuxA5q12EOWDwQ"
-        - name: X-Client-Id
-          in: header
-          description: client ID
-          required: true
-          schema:
-            type: string
-            default: "web"
-        - name: id3
-          in: query
-          required: true
-          schema:
-            type: string
-            default: "query-id-3"
-      responses:
-        '200':
-          description: 'list of available components'
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/SampleResponse'
-        '500':
-          description: Internal server error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ServerErrorResponse'
-
+  
   #4
   /v2/sampleTemplate/getString:
     get:
